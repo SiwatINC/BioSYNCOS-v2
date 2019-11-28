@@ -37,6 +37,7 @@ void SC16IS752::setup(uint8_t Channel, uint8_t BaudrateDevisor, uint8_t LineCont
 void SC16IS752::writeUART(uint8_t RegAddr, uint8_t Channel, uint8_t Data)
 {
   I2c.write(this->Address, ((RegAddr << 3) | (Channel << 1)), Data);
+
 }
 
 /***********************
